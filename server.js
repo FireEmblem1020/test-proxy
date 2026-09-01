@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // 🛑 SET YOUR PRIVATE PASSWORD INSIDE THE QUOTES BELOW
-const PROXY_PASSWORD = "howdidyoufindthis";
+const PROXY_PASSWORD = "mysecretpassword";
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
