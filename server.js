@@ -89,12 +89,15 @@ app.get('/', (req, res) => {
                         return;
                     }
 
-                    // Open everything smoothly into the about:blank framing canvas
+                    // Open everything smoothly into the about:blank framing canvas with fake Tab Cloaking
                     blankWindow.document.write(\`
                         <!DOCTYPE html>
                         <html>
                         <head>
-                            <title>Proxy Session</title>
+                            <!-- 🛠️ TAB CLOAKING DATA -->
+                            <title>Google Docs</title>
+                            <link rel="icon" type="image/x-icon" href="https://gstatic.com">
+                            
                             <style>
                                 body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
                                 iframe { width: 100%; height: 100%; border: none; }
